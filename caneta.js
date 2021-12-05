@@ -15,25 +15,29 @@ export class Canetas {
     //     Canetas.numeroDeCanetas += 1;
     //}
 
+    escrever() {
+        if(this.tampada == true || this.carga <= 0){
+            console.log("Você não pode escrever, verifique sua caneta.");
+        }else{
+            console.log("Escrevendo...")
+        }
+    }
 
-// class escrever {
-//     if(tampada == true){
-//          console.log(numeroDeCanetas);
-//     }
-// }
+    tampar(){
+        if(this.tampada){
+            console.log("Sua caneta já está tampada!");
+        }else{
+            this.tampada = true;
+            console.log("Sua caneta foi tampada!");
+        }
+    }
 
-tampar(){
-    if(tampada == false){
-        console.log("Sua caneta foi tampada");
-        tampada = true;
-    }else{
-        console.log("Sua caneta já está tampada");
+    destampar(){
+        if(this.tampada){
+            this.tampada = false;
+            console.log("Sua caneta foi destampada!");
+        }else{
+            console.log("Sua caneta já está destampada!");
+        }
     }
 }
-}
-
-// destampar(){
-//     if(tampada){
-
-//     }
-// }
